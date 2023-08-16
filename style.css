@@ -1012,10 +1012,12 @@ body::-webkit-scrollbar-thumb {
 
 #portflio .container #allWork .row .box .image {
     width: 100%;
+    height: 100%;
     transition: 0.3s;
     position: absolute;
     top: 0;
     left: 0;
+    object-fit: cover;
 }
 
 #portflio .container #allWork .row .box .shadow {
@@ -1103,6 +1105,7 @@ body::-webkit-scrollbar-thumb {
     width: 6px;
     height: 6px;
     animation: portStr1 1.6s infinite ease-in-out alternate;
+    -webkit-animation: portStr1 1.6s infinite ease-in-out alternate;
 }
 
 @keyframes portStr1 {
