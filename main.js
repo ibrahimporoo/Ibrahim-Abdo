@@ -152,7 +152,7 @@ jsonBtn.addEventListener("click", (btn) => {
     btn.target.classList.add("active");
     // show imgs
     ownSec.style.display = "none";
-    jsonSec.style.display = "block";
+    reactAppsSec.style.display = "block";
     mentorSec.style.display = "none";
 
 });
