@@ -93,13 +93,13 @@ phoneLinks = (id) => {
 let allBtn = document.getElementById("all");
 let mentorBtn = document.getElementById("mentor");
 let ownBtn = document.getElementById("own");
-let jsonBtn = document.getElementById("json");
+let jsonBtn = document.getElementById("reactApps");
 let allBtns = Array.from(document.querySelectorAll(".top .right a"));
 
 let mentorSec = document.getElementById("mentorSec");
 let ownSec = document.getElementById("ownSec");
-let jsonSec = document.getElementById("jsonSec");
-let allSec = jsonSec.innerHTML + mentorSec.innerHTML + ownSec.innerHTML;
+let reactAppsSec = document.getElementById("reactAppsSec");
+let allSec = reactAppsSec.innerHTML + mentorSec.innerHTML + ownSec.innerHTML;
 
 // all function
 allBtn.addEventListener("click", (btn) => {
@@ -112,7 +112,7 @@ allBtn.addEventListener("click", (btn) => {
     // show imgs
     mentorSec.style.display = "block";
     ownSec.style.display = "block";
-    jsonSec.style.display = "block";
+    reactAppsSec.style.display = "block";
 });
 // vector function
 mentorBtn.addEventListener("click", (btn) => {
@@ -124,7 +124,7 @@ mentorBtn.addEventListener("click", (btn) => {
     btn.target.classList.add("active");
     // show imgs
     ownSec.style.display = "none";
-    jsonSec.style.display = "none";
+    reactAppsSec.style.display = "none";
     mentorSec.style.display = "block";
 
 });
@@ -138,7 +138,7 @@ ownBtn.addEventListener("click", (btn) => {
     btn.target.classList.add("active");
     // show imgs
     ownSec.style.display = "block";
-    jsonSec.style.display = "none";
+    reactAppsSec.style.display = "none";
     mentorSec.style.display = "none";
 
 });
@@ -161,21 +161,21 @@ jsonBtn.addEventListener("click", (btn) => {
 window.onscroll = () => {
 
     if (this.scrollY >= 590 && this.scrollY <= 1310) {
-        document.getElementById("evo1").style.width = "305px";
+        document.getElementById("evo1") && (document.getElementById("evo1").style.width = "305px");
         // progress of skills function
         setTimeout(() => {
-            document.getElementById("evo2").style.width = "245px";
+            document.getElementById("evo2") && (document.getElementById("evo2").style.width = "245px");
             setTimeout(() => {
-                document.getElementById("evo3").style.width = "215px";
+                document.getElementById("evo3") && (document.getElementById("evo3").style.width = "215px");
             }, 200);
         }, 200);
     } else {
-        document.getElementById("evo1").style.width = "0";
+        document.getElementById("evo1") && (document.getElementById("evo1").style.width = "0");
         // progress of skills function
         setTimeout(() => {
-            document.getElementById("evo2").style.width = "0";
+            document.getElementById("evo2") && (document.getElementById("evo2").style.width = "0");
             setTimeout(() => {
-                document.getElementById("evo3").style.width = "0";
+                document.getElementById("evo3") && (document.getElementById("evo3").style.width = "0");
             }, 1);
         }, 1);
     }
@@ -330,30 +330,30 @@ window.onload = () => {
 }
 
 //
-let activeimgpop = document.querySelector(".active-img-pop");
-let imgcontntjs = document.querySelectorAll(".row .box");
-let divimg = document.querySelector(".div-img");
+// let activeimgpop = document.querySelector(".active-img-pop");
+// let imgcontntjs = document.querySelectorAll(".row .box");
+// let divimg = document.querySelector(".div-img");
 
 
 
-imgcontntjs.forEach((element) => {
-    element.addEventListener("click", function(eo) {
-        showactiveimg();
-        let getsrc = element.getElementsByTagName("img")[0].src;
-        let srcimg = divimg.getElementsByTagName("img")[0];
-        srcimg.src = getsrc;
-        console.log(element)
-    });
-});
+// imgcontntjs.forEach((element) => {
+//     element.addEventListener("click", function(eo) {
+//         showactiveimg();
+//         let getsrc = element.getElementsByTagName("img")[0].src;
+//         let srcimg = divimg.getElementsByTagName("img")[0];
+//         srcimg.src = getsrc;
+//         console.log(element)
+//     });
+// });
 
-activeimgpop.addEventListener("click", function() {
-    removeshowactiveimg();
-});
+// activeimgpop.addEventListener("click", function() {
+//     removeshowactiveimg();
+// });
 
-function removeshowactiveimg() {
-    activeimgpop.classList.remove("active");
-}
+// function removeshowactiveimg() {
+//     activeimgpop.classList.remove("active");
+// }
 
-function showactiveimg() {
-    activeimgpop.classList.add("active");
-}
+// function showactiveimg() {
+//     activeimgpop.classList.add("active");
+// }
