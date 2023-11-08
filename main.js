@@ -87,7 +87,7 @@ phoneLinks = (id) => {
 	}
 };
 
-// =====================  PORTFLIO  =====================
+// =====================  Portfolio  =====================
 let allBtn = document.getElementById("all");
 let mentorBtn = document.getElementById("mentor");
 let ownBtn = document.getElementById("own");
@@ -207,7 +207,7 @@ window.onscroll = () => {
 		});
 		document.getElementById("link3").classList.add("active");
 	}
-	// for portflio section
+	// for Portfolio section
 	if (this.scrollY > 2600) {
 		allLinks.forEach((e) => {
 			e.classList.remove("active");
@@ -247,7 +247,7 @@ window.onscroll = () => {
 		});
 		document.getElementById("link3Phone").classList.add("active");
 	}
-	// for portflio section
+	// for Portfolio section
 	if (this.scrollY > 3585) {
 		allLinksPhone.forEach((e) => {
 			e.classList.remove("active");
