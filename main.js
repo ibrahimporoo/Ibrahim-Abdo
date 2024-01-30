@@ -92,11 +92,13 @@ let allBtn = document.getElementById("all");
 let mentorBtn = document.getElementById("mentor");
 let ownBtn = document.getElementById("own");
 let jsonBtn = document.getElementById("reactApps");
+let nextBtn = document.getElementById("nextApps");
 let allBtns = Array.from(document.querySelectorAll(".top .right a"));
 
 let mentorSec = document.getElementById("mentorSec");
 let ownSec = document.getElementById("ownSec");
 let reactAppsSec = document.getElementById("reactAppsSec");
+let nextAppsSec = document.getElementById("nextAppsSec");
 let allSec = reactAppsSec.innerHTML + mentorSec.innerHTML + ownSec.innerHTML;
 
 // all function
@@ -108,6 +110,7 @@ allBtn.addEventListener("click", (btn) => {
 	// add a bg to selected btn
 	btn.target.classList.add("active");
 	// show imgs
+	nextAppsSec.style.display = "block";
 	mentorSec.style.display = "block";
 	ownSec.style.display = "block";
 	reactAppsSec.style.display = "block";
@@ -118,9 +121,11 @@ mentorBtn.addEventListener("click", (btn) => {
 	allBtn.classList.remove("active");
 	ownBtn.classList.remove("active");
 	jsonBtn.classList.remove("active");
+	nextAppsSec.classList.remove("active");
 	// add a bg to selected btn
 	btn.target.classList.add("active");
 	// show imgs
+	nextAppsSec.style.display = "none";
 	ownSec.style.display = "none";
 	reactAppsSec.style.display = "none";
 	mentorSec.style.display = "block";
@@ -131,12 +136,14 @@ ownBtn.addEventListener("click", (btn) => {
 	allBtn.classList.remove("active");
 	mentorBtn.classList.remove("active");
 	jsonBtn.classList.remove("active");
+	nextAppsSec.classList.remove("active");
 	// add a bg to selected btn
 	btn.target.classList.add("active");
 	// show imgs
 	ownSec.style.display = "block";
 	reactAppsSec.style.display = "none";
 	mentorSec.style.display = "none";
+	nextAppsSec.style.display = "none";
 });
 // web function
 jsonBtn.addEventListener("click", (btn) => {
@@ -144,12 +151,29 @@ jsonBtn.addEventListener("click", (btn) => {
 	allBtn.classList.remove("active");
 	mentorBtn.classList.remove("active");
 	ownBtn.classList.remove("active");
+	nextAppsSec.classList.remove("active");
 	// add a bg to selected btn
 	btn.target.classList.add("active");
 	// show imgs
 	ownSec.style.display = "none";
-	reactAppsSec.style.display = "block";
+	nextAppsSec.style.display = "none";
 	mentorSec.style.display = "none";
+	reactAppsSec.style.display = "block";
+});
+
+nextBtn.addEventListener("click", (btn) => {
+	//remove bg from all btns
+	allBtn.classList.remove("active");
+	mentorBtn.classList.remove("active");
+	ownBtn.classList.remove("active");
+	jsonBtn.classList.remove('active');
+	// add a bg to selected btn
+	btn.target.classList.add("active");
+	// show imgs
+	ownSec.style.display = "none";
+	reactAppsSec.style.display = "none";
+	mentorSec.style.display = "none";
+	nextAppsSec.style.display = "block";
 });
 
 // =====================  Scrolling =====================
